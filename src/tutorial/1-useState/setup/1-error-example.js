@@ -7,7 +7,10 @@ const ErrorExample = () => {
 
     const changeTitle = () => {
         // title = "Hello Friend!";
-        setTitleText("Helloe Friends!");
+        if(titleText === "Random Title")
+            setTitleText("Hello Friends!");
+        else if(titleText === "Hello Friends!")
+            setTitleText("Random Title");
     }
 
   return(
