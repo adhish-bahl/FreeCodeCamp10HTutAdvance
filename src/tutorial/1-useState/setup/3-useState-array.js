@@ -19,7 +19,7 @@ const UseStateArray = () => {
           </>
         );
       })}
-      <button className="btn">Clear All</button>
+      <button style={{marginBottom:"30px"}} className="btn" onClick={()=>setDeatils([])}>Clear All</button>
     </>
   );
 };
