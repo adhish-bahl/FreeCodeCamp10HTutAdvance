@@ -6,7 +6,7 @@ function App() {
     <div className='container'>
       <h2>Advanced Tutorial</h2>
       <hr style={{margin:"20px 0px"}} />
-      <Final/>
+      {/* <Final/> */}
       <hr style={{margin:"20px 0px"}} />
       <Setup/>
     </div>
