@@ -33,4 +33,14 @@ const List = ({people, removePerson}) => {
   )
 }
 
+const SinglePerson = (props) => {
+  const {id, people, removePerson} = props;
+  return (
+    <p>
+      <h4>{people.name}</h4>
+      <button onClick={()=> removePerson(id)}>remove</button>
+    </p>
+  )
+}
+
 export default PropDrilling;
