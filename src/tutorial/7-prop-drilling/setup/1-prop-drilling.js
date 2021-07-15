@@ -26,7 +26,7 @@ const List = ({people, removePerson}) => {
     <>
       {people.map((people)=> {
         return(
-          <SinglePerson key={people.id} people={people} removePerson={removePerson} />
+          <SinglePerson key={people.id} {...people} removePerson={removePerson} />
         )
       })}
     </>
@@ -34,12 +34,12 @@ const List = ({people, removePerson}) => {
 }
 
 const SinglePerson = (props) => {
-  const {id, people, removePerson} = props;
+  const {id, name, removePerson} = props;
   return (
-    <p>
-      <h4>{people.name}</h4>
+    <div className="item">
+      <h4>{name}</h4>
       <button onClick={()=> removePerson(id)}>remove</button>
-    </p>
+    </div>
   )
 }
 
