@@ -21,8 +21,16 @@ const PropDrilling = () => {
   );
 };
 
-const List = () => {
-
+const List = ({people, removePerson}) => {
+  return(
+    <>
+      {people.map((people)=> {
+        return(
+          <SinglePerson key={people.id} people={people} removePerson={removePerson} />
+        )
+      })}
+    </>
+  )
 }
 
 export default PropDrilling;
