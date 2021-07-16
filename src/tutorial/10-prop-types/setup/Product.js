@@ -18,4 +18,10 @@ Product.propTypes = {
   price: PropTypes.number.isRequired,
 };
 
+Product.defaultProps = {
+  name: "Name Undefined",
+  price: 3.99,
+  image: defaultImage,
+};
+
 export default Product;
