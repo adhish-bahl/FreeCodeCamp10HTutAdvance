@@ -16,8 +16,18 @@ import Navbar from './Navbar';
 const ReactRouterSetup = () => {
   return(
     <Router>
+      <Navbar />
       <Route path="/">
         <Home />
+      </Route>
+      <Route path="/about">
+        <About />
+      </Route>
+      <Route path="/people">
+        <People />
+      </Route>
+      <Route path="*">
+        <Error />
       </Route>
     </Router>
   )
