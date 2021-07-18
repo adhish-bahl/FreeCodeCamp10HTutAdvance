@@ -47,15 +47,15 @@ const Index = () => {
   )
 }
 
-const BigList = ({ products }) => {
+const BigList = React.memo(({ products }) => {
   return (
     <section className='products'>
       {products.map((product) => {
-        return <SingleProduct key={product.id} {...product}></SingleProduct>
+        return <SingleProduct key={product.id} {...product} addToCart={addToCart}></SingleProduct>
       })}
     </section>
   )
-}
+})
 
 const SingleProduct = ({ fields }) => {
   let { name, price } = fields
