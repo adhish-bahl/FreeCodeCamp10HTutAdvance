@@ -47,7 +47,7 @@ const Index = () => {
   )
 }
 
-const BigList = React.memo(({ products }) => {
+const BigList = React.memo(({ products, addToCart }) => {
   return (
     <section className='products'>
       {products.map((product) => {
@@ -57,7 +57,7 @@ const BigList = React.memo(({ products }) => {
   )
 })
 
-const SingleProduct = ({ fields }) => {
+const SingleProduct = ({ fields, addToCart }) => {
   let { name, price } = fields
   price = price / 100
   const image = fields.image[0].url
@@ -67,6 +67,7 @@ const SingleProduct = ({ fields }) => {
       <img src={image} alt={name} />
       <h4>{name}</h4>
       <p>${price}</p>
+      <button onClick={addToCart}>Add To cart</button>
     </article>
   )
 }
