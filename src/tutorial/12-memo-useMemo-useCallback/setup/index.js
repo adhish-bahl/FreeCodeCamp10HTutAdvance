@@ -23,6 +23,15 @@ const Index = () => {
   const { products } = useFetch(url)
   const [count, setCount] = useState(0)
 
+  const [cart, setCart] = useState(0)
+
+  const addToCart = useCallback(
+    () => {
+      setCart(cart+1);
+    },
+    [cart],
+  );
+
   return (
     <>
       <h1>Count : {count}</h1>
